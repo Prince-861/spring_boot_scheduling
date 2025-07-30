@@ -1,7 +1,6 @@
 package com.springscheduling.service;
 
 import java.util.Date;
-
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -46,16 +45,16 @@ public class Task1 {
 //	task1...endsTue Jul 29 16:22:50 IST 2025
 //	task1...startsTue Jul 29 16:22:50 IST 2025
 	
-	@Scheduled(fixedRate=10000)
-	public void doTask() {
-		System.out.println("task1...starts"+new Date());
-		try {
-			Thread.sleep(15000);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-		System.out.println("task1...ends"+new Date());
-	}
+//	@Scheduled(fixedRate=10000)
+//	public void doTask() {
+//		System.out.println("task1...starts"+new Date());
+//		try {
+//			Thread.sleep(15000);
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}
+//		System.out.println("task1...ends"+new Date());
+//	}
 	
 //	org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'task1' defined in file [P:\springboot_workspace\spring-scheduler-workspace\BootSchedulingProj02\target\classes\com\springscheduling\service\Task1.class]: 
 //	Encountered invalid @Scheduled method 'doTask': Exactly one of the 'cron', 'fixedDelay' or 'fixedRate' attributes is required

@@ -23,8 +23,29 @@ public class Task2 {
 //	task2....startsWed Jul 30 11:47:15 IST 2025
 //	-------------------------------------------
 //	-------------------------------------------
-	@Scheduled(cron="15 * * * * *")
-	public void doTask() {
-		System.out.println("task2....starts" + new Date());
+//	@Scheduled(cron="15 * * * * *")
+//	public void doTask() {
+//		System.out.println("task2....starts" + new Date());
+//	}
+	
+//	Execute task for every one hour
+//	@Scheduled(cron="0 0 0-23 * * *")
+	@Scheduled(cron="0 0 * * * *")
+	public void doTaskHourly() {
+		System.out.println("hourly task....starts"+ new Date());
 	}
+	
+//	Execute task for every one minute
+//	@Scheduled(cron="0 0-59 * * * *")
+	@Scheduled(cron="0 * * * * *")//Every min 0 second 
+	public void doTaskOnEveryMin() {
+		System.out.println("Minutely task...starts"+ new Date());
+	}
+	
+//	Execute taks in 38,39,41 minute of every hour
+	@Scheduled(cron="0 39,40,42 * * * *")
+	public void executeOnFourSixEightMin() {
+		System.out.println("Executing....."+new Date());
+	}
+	
 }
